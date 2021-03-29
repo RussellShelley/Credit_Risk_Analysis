@@ -23,14 +23,32 @@ jupyter notebook, imbalanced-learn, scikit_learn
 Results: Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.
 
 - RandomOverSampler algorithm (oversample) 
-![Random  Random Over Sample](./analysis/randomoversampler.png)
+    - re-sampled data increases the smaller class' data 
 
-![Results random over sample](./analysis/results_randomoversampler.png)
+    ![Random  Random Over Sample](./analysis/randomoversampler.png)
+    - Fitting this re-sampled data to the logisticRegression model, gives accuracy score of 0.65 and the following confusion matrix/ classification report.
+
+    ![Results random over sample](./analysis/results_randomoversampler.png)
 
 
 - SMOTE algorithm (oversample)
+    - re-sampling with SMOTE again increases the smaller (high-risk) class' data
+
+    ![SMOTE Oversample](./analysis/SMOTEOversample.png)
+
+   - Again we use the Logistic Regression model. The results are as follows.
+
+    ![SMOTE results](./analysis/results_SMOTE.png)    
 
 - ClusterCentroids algorithm (undersample)
+    - re-sampling with Cluster centroids undersamples the larger low-risk class.
+
+    ![clustercentroids](./analysis/clustercentroids.png)
+
+    - This re-sampled data is fitted to LinearRegression model and we see the following.
+
+    ![ClusterCentroids results](./analysis/results_ClusterCentroids.png) 
+
 
 - SMOTEEN algorithm(over and undersampling)
 
