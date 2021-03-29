@@ -50,7 +50,14 @@ Results: Using bulleted lists, describe the balanced accuracy scores and the pre
     ![ClusterCentroids results](./analysis/results_ClusterCentroids.png) 
 
 
-- SMOTEEN algorithm(over and undersampling)
+- SMOTEENN algorithm(over and undersampling)
+    - re-sampling with SMOTEENN uses a combination approach.
+
+    ![SMOTEENN](./analysis/SMOTEENN.png)
+    
+    - again I used Linear Regression model. The results are as follows.
+
+    ![SMOTEENN results](./analysis/results_SMOTEENN.png)
 
 - BalancedRandomForestClassifier (bias reducing model)
 
