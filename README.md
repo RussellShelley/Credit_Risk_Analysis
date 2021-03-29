@@ -17,12 +17,16 @@ Credit risk is an inherently unbalanced classification problem, as good loans ea
 
 
 ## Resources
-jupyter notebook, imbalanced-lean, scikit_learn 
+jupyter notebook, imbalanced-learn, scikit_learn  
 
 ## Results
 Results: Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.
 
 - RandomOverSampler algorithm (oversample) 
+![Random  Random Over Sample](./analysis/randomoversampler.png)
+
+![Results random over sample](./analysis/results_randomoversampler.png)
+
 
 - SMOTE algorithm (oversample)
 
