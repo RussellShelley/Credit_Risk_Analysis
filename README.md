@@ -31,6 +31,9 @@ Results: Using bulleted lists, describe the balanced accuracy scores and the pre
 
     ![Random  Random Over Sample](./analysis/randomoversampler.png)
     - Fitting this re-sampled data to the logisticRegression model, gives the following accuracy score, confusion matrix/ classification report.
+        - Balanced Acc. = 0.65 (not great)
+        - Precision(high risk positive) = 0.01 (poor)
+        - Sensitivity(high risk positive) = (0.69 okay) 
 
     ![Results random over sample](./analysis/results_randomoversampler.png)
 
@@ -41,6 +44,9 @@ Results: Using bulleted lists, describe the balanced accuracy scores and the pre
     ![SMOTE Oversample](./analysis/SMOTEOversample.png)
 
    - Again we use the Logistic Regression model. The results are as follows. 
+        - Balanced Acc. = 0.66 (not great)
+        - Precision(high risk positive) = 0.01 (poor)
+        - Sensitivity(high risk positive) = 0.63 (not great) 
 
     ![SMOTE results](./analysis/results_SMOTE.png)    
 
@@ -50,6 +56,9 @@ Results: Using bulleted lists, describe the balanced accuracy scores and the pre
     ![clustercentroids](./analysis/ClusterCentroids.png)
 
     - This re-sampled data is fitted to LinearRegression model and we see the following results. 
+        - Balanced Acc. = 0.54 (not great)
+        - Precision(high risk positive) = 0.01 (poor)
+        - Sensitivity(high risk positive) = 0.69 (getting better) 
 
     ![ClusterCentroids results](./analysis/results_ClusterCentroids.png) 
 
@@ -60,6 +69,9 @@ Results: Using bulleted lists, describe the balanced accuracy scores and the pre
     ![SMOTEENN](./analysis/SMOTEENN.png)
     
     - again I used Linear Regression model. The results are as follows. 
+        - Balanced Acc. = 0.64 (not great)
+        - Precision(high risk positive) = 0.01 (poor)
+        - Sensitivity(high risk positive) = 0.72 (getting better) 
 
     ![SMOTEENN results](./analysis/results_SMOTEENN.png)
 
@@ -69,6 +81,9 @@ Results: Using bulleted lists, describe the balanced accuracy scores and the pre
     ![BRFC](./analysis/BRFC.png)
 
     - the results can be seen below.  I was also able to see which columns had the greatest influence on outcome.
+        - Balanced Acc. = 0.79 (pretty good)
+        - Precision(high risk positive) = 0.03 (still very poor but improved a little)
+        - Sensitivity(high risk positive) = 0.70 
 
     ![BRFC results](./analysis/results_BRFC.png)
 
@@ -80,7 +95,10 @@ Results: Using bulleted lists, describe the balanced accuracy scores and the pre
 
     ![EEC](./analysis/EEABC.png)
 
-    -  the results can be seen below. Note the high accuracy score 0.93
+    -  the results can be seen below. 
+        - Balanced Acc. =  0.93 (great-our highest score)
+        - Precision(high risk positive) = 0.09 (our highest score, but still poor)
+        - Sensitivity(high risk positive) = 0.92 (great score which means only a few false negatives)
 
     ![results_EEC](./analysis/results_EEABC.png)
     
@@ -95,7 +113,9 @@ Results: Using bulleted lists, describe the balanced accuracy scores and the pre
  - However, sensitivity and precision when predicting the lower case, high risk loans, is a problem.  F1 score illustrates the balance of precision and sensitivity with a score of 1 being perfect. Looking at the classification reports we can see no model does a good job.
  EasyEnsemble does the best, but it still has a low precision score (0.09) which leads to a low,(albeit the best here) F1 score 0.16.
  - This can be further evidenced in the confusion matrix of the best performer where we see 983 false positives(compared to just 93 true positives).
- - **I would conclude that none of these models are good at predicting High-Risk loans.**
+ -If you wish to avoid wrongly flagging low-risk loans as high risk, **I would conclude that none of these models are good at predicting High-Risk loans.**
+ - The caveat is that if you are in a situation when you are **only** worried about false negatives(missing high-risk loans), then EasyEnsembleClassifier with it's high sensitivity could be of use.  
+
 
 
  
