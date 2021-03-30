@@ -33,7 +33,7 @@ Results: Using bulleted lists, describe the balanced accuracy scores and the pre
     - Fitting this re-sampled data to the logisticRegression model, gives the following accuracy score, confusion matrix/ classification report.
         - Balanced Acc. = 0.65 (not great)
         - Precision(high risk positive) = 0.01 (poor)
-        - Sensitivity(high risk positive) = (0.69 okay) 
+        - Sensitivity(high risk positive) = 0.69 (okay) 
 
     ![Results random over sample](./analysis/results_randomoversampler.png)
 
